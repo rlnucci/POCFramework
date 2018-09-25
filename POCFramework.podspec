@@ -40,18 +40,18 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/rlnucci/POCFramework.git", :tag => s.version.to_s }
+  s.source       = { :http => "https://github.com/rlnucci/POCFramework/raw/master/Framework.zip" }
   s.default_subspec = "Core"
 
   s.subspec 'Core' do |ss|
     ss.ios.deployment_target = "9.0"
-    ss.ios.vendored_frameworks = 'POCFramework.framework'
+    ss.ios.vendored_frameworks = 'Aggregated/POCFramework.framework'
     #ss.source_files = 'POCFramework.framework/Headers/*.h'
   end
 
   s.subspec 'OCR' do |ss|
     ss.ios.deployment_target = "9.0"
-    ss.ios.vendored_frameworks = 'OCR.framework'
+    ss.ios.vendored_frameworks = 'Aggregated/OCR.framework'
     #ss.source_files = 'OCR.framework/Headers/*.h'
     ss.pod_target_xcconfig  = { 'OTHER_SWIFT_FLAGS[config=Debug]' => '-DOCR',  'OTHER_SWIFT_FLAGS[config=Release]' => '-DOCR'}
   end

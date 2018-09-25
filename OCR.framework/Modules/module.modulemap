@@ -1,4 +1,0 @@
-framework module OCR {
-    header "OCR-Swift.h"
-    requires objc
-}

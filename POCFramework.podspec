@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/rlnucci/POCFramework.git", :tag => s.version.to_s }
-  s.default_spec = "Core"
+  s.default_subspec = "Core"
 
   s.subspec 'Core' do |ss|
     ss.ios.deployment_target = "9.0"

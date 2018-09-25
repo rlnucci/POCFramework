@@ -40,12 +40,12 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :http => "https://swiftrocks.com/Framework.zip" }
+  s.source       = { :http => "https://developer.visa.com/images2/products/visa_checkout/SDK/VisaCheckout-iOS-SDK-6.6.0.zip" }
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|
     ss.ios.deployment_target = "9.0"
-    ss.vendored_frameworks = "Framework/POCFramework.framework"
+    ss.vendored_frameworks = "VisaCheckout-iOS-SDK-6.6.0/VisaCheckoutSDK.framework"
   end
 
   s.subspec "OCR" do |ss|

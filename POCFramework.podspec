@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :http => "https://github.com/rlnucci/POCFramework/raw/master/Framework.zip" }
+  s.source       = { :http => "https://swiftrocks.com/Framework.zip" }
   s.default_subspec = "Core"
 
   s.subspec "Core" do |ss|

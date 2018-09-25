@@ -18,23 +18,12 @@ Pod::Spec.new do |s|
   s.name         = "POCFramework"
   s.version      = "0.0.1"
   s.summary      = "testando distribuição via pods e framework"
-
-  # This description is used to generate tags and improve search results.
-  #   * Think: What does it do? Why did you write it? What is the focus?
-  #   * Try to keep it short, snappy and to the point.
-  #   * Write the description between the DESC delimiters below.
-  #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-  TODO: Add long description of the pod here.
-                       DESC
-  s.homepage         = 'https://github.com/rlnucci/POCFramework'
-
-  s.license      = { :type => "Visa Developer Center Terms of Use", :text => "https://developer.visa.com/terms" }
-
+  s.homepage     = 'https://github.com/rlnucci/POCFramework'
   s.author       = { "Raissa Nucci" => "raissanucci@gmail.com" }
   s.platform     = :ios, "9.0"
-  
+
   s.source       = { :http => "https://developer.visa.com/images2/products/visa_checkout/SDK/VisaCheckout-iOS-SDK-6.6.0.zip" }
   s.vendored_frameworks = "VisaCheckout-iOS-SDK-6.6.0/VisaCheckoutSDK.framework"
-  
+
+  s.license      = { :type => "Visa Developer Center Terms of Use", :text => "https://developer.visa.com/terms" }
 end

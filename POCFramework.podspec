@@ -29,17 +29,11 @@ Pod::Spec.new do |s|
                        DESC
   s.homepage         = 'https://github.com/rlnucci/POCFramework'
 
-  s.license      = "MIT"
+  s.license      = { :type => "Visa Developer Center Terms of Use", :text => "https://developer.visa.com/terms" }
 
   s.author       = { "Raissa Nucci" => "raissanucci@gmail.com" }
   s.platform     = :ios, "9.0"
-
-  # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  #
-  #  Specify the location from where the source should be retrieved.
-  #  Supports git, hg, bzr, svn and HTTP.
-  #
-
+  
   s.source       = { :http => "https://developer.visa.com/images2/products/visa_checkout/SDK/VisaCheckout-iOS-SDK-6.6.0.zip" }
   s.vendored_frameworks = "VisaCheckout-iOS-SDK-6.6.0/VisaCheckoutSDK.framework"
   

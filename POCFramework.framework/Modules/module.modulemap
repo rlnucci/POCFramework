@@ -1,11 +1,4 @@
 framework module POCFramework {
-  umbrella header "POCFramework.h"
-
-  export *
-  module * { export * }
-}
-
-module POCFramework.Swift {
     header "POCFramework-Swift.h"
     requires objc
 }

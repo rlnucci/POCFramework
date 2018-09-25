@@ -41,7 +41,6 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/rlnucci/POCFramework.git", :tag => s.version.to_s }
-  s.public_header_files = "POCFramework.h"
   s.default_spec = "Core"
 
   s.subspec 'Core' do |ss|

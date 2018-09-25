@@ -1,0 +1,11 @@
+framework module OCR {
+  umbrella header "OCR.h"
+
+  export *
+  module * { export * }
+}
+
+module OCR.Swift {
+    header "OCR-Swift.h"
+    requires objc
+}

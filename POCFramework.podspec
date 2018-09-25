@@ -42,6 +42,19 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/rlnucci/POCFramework.git", :tag => s.version.to_s }
   s.public_header_files = "POCFramework.h"
+  s.default_spec = "Core"
 
-  s.ios.vendored_frameworks = 'POCFramework.framework'
+  s.subspec 'Core' do |ss|
+    ss.ios.deployment_target = "9.0"
+    ss.source_files = "POCFramework.h"
+    ss.ios.vendored_frameworks = 'POCFramework.framework'
+  end
+
+  s.subspec 'OCR' do |ss|
+    ss.ios.deployment_target = "9.0"
+    ss.source_files = "OCR.h"
+    ss.ios.vendored_frameworks = 'OCR.framework'
+    ss.pod_target_xcconfig  = { 'OTHER_SWIFT_FLAGS[config=Debug]' => '-DOCR',  'OTHER_SWIFT_FLAGS[config=Release]' => '-DOCR'}
+  end
+  
 end

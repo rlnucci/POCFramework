@@ -45,13 +45,13 @@ Pod::Spec.new do |s|
 
   s.subspec 'Core' do |ss|
     ss.ios.deployment_target = "9.0"
-    ss.ios.vendored_frameworks = 'Framework/Aggregated/POCFramework.framework'
+    ss.ios.vendored_frameworks = 'Framework/POCFramework.framework'
     #ss.source_files = 'Aggregated/POCFramework.framework/Headers/*.h'
   end
 
   s.subspec 'OCR' do |ss|
     ss.ios.deployment_target = "9.0"
-    ss.ios.vendored_frameworks = 'Framework/Aggregated/OCR.framework'
+    ss.ios.vendored_frameworks = 'Framework/OCR.framework'
     #ss.source_files = 'Aggregated/OCR.framework/Headers/*.h'
     ss.pod_target_xcconfig  = { 'OTHER_SWIFT_FLAGS[config=Debug]' => '-DOCR',  'OTHER_SWIFT_FLAGS[config=Release]' => '-DOCR'}
   end

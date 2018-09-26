@@ -15,15 +15,15 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "VisaCheckoutSDK"
+  s.name         = "POCFramework"
   s.version      = "0.0.1"
   s.summary      = "testando distribuição via pods e framework"
   s.homepage     = 'https://github.com/rlnucci/POCFramework'
   s.author       = { "Raissa Nucci" => "raissanucci@gmail.com" }
   s.platform     = :ios, "9.0"
 
-  s.source       = { :http => "https://developer.visa.com/images2/products/visa_checkout/SDK/VisaCheckout-iOS-SDK-6.6.0.zip" }
-  s.vendored_frameworks = "VisaCheckout-iOS-SDK-6.6.0/VisaCheckoutSDK.framework"
+  s.source       = { :http => "https://github.com/rlnucci/POCFramework/raw/master/POCFramework.zip" }
+  s.vendored_frameworks = "POCFramework.framework"
 
   s.license      = { :type => "Visa Developer Center Terms of Use", :text => "https://developer.visa.com/terms" }
 end

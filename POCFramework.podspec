@@ -21,9 +21,22 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/rlnucci/POCFramework'
   s.author       = { "Raissa Nucci" => "raissanucci@gmail.com" }
   s.platform     = :ios, "9.0"
+  s.default_subspec = 'Core'
 
   s.source       = { :http => "https://github.com/rlnucci/POCFramework/raw/master/POCFramework.zip" }
-  s.vendored_frameworks = "POCFramework.framework"
 
+  s.subspec 'Core' do |ss|
+    ss.ios.deployment_target = '9.0'
+    ss.ios.vendored_frameworks = 'POCFramework.framework'
+  end
+
+  s.subspec 'OCR' do |ss| 
+    ss.ios.deployment_target = '9.0'
+    ss.ios.vendored_frameworks = 'OCR.framework'
+    ss.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => '-DOCR' }
+  end
+
+  #s.ios.vendored_frameworks = 'POCFramework.framework'
   s.license      = { :type => "Visa Developer Center Terms of Use", :text => "https://developer.visa.com/terms" }
+
 end

@@ -21,19 +21,23 @@ Pod::Spec.new do |s|
   s.homepage     = 'https://github.com/rlnucci/POCFramework'
   s.author       = { "Raissa Nucci" => "raissanucci@gmail.com" }
   s.platform     = :ios, "9.0"
-  s.default_subspec = 'Core'
 
   s.source       = { :http => "https://github.com/rlnucci/POCFramework/raw/master/POCFramework.zip" }
 
   s.subspec 'Core' do |ss|
     ss.ios.deployment_target = '9.0'
-    ss.ios.vendored_frameworks = 'POCFramework.framework'
+    ss.ios.vendored_frameworks = 'PayCardsRecognizer.framework'
   end
+
+  s.subspec 'Payment' do |ss| 
+    ss.ios.deployment_target = '9.0'
+    ss.ios.vendored_frameworks = 'POCFramework.framework'
+    ss.dependency 'POCFramework/Core'
 
   s.subspec 'OCR' do |ss| 
     ss.ios.deployment_target = '9.0'
-    ss.ios.vendored_frameworks = 'OCR.framework'
-    ss.pod_target_xcconfig = { 'OTHER_SWIFT_FLAGS' => '-DOCR' }
+    ss.ios.vendored_frameworks = 'OCR.framework', 'PayCardsRecognizer.framework'
+    ss.dependency 'POCFramework/Core'
   end
 
   #s.ios.vendored_frameworks = 'POCFramework.framework'
